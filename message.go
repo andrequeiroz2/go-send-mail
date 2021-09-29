@@ -39,10 +39,9 @@ func (msg *Message) Deliver() error{
 	email.SetHeader("Subject", "New message via Contact Form")
 	email.SetBody("text/plain", msg.Content)
 
-	username:= "368a454de06606"
-	password:= "9a1f51d96c450a"
+	username:= "you username"
+	password:= "you password"
 
 	return mail.NewDialer("smtp.mailtrap.io", 2525, username, password).DialAndSend(email)
 }
 
-//func SendMail(addr server:port, a Auth, from email_address, to []email_address, msg []content_here) error
